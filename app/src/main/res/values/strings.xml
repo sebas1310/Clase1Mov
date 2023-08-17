@@ -7,7 +7,9 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="btnCount">Count</string>
-
+    <string name="cnt_txt">0</string>
+    <string name="title">Title</string>
+    <string name="reset">Reset</string>
     <string name="lorem_ipsum">
         Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
         Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui

@@ -19,6 +19,7 @@ import com.example.bsa2.databinding.ActivityMainBinding;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,9 +30,15 @@ public class MainActivity extends AppCompatActivity {
     //add bntCnt varibale
     private Button bntCnt;
 
+    private Button btnrst;
+
     //add cnt variable
     private int cnt=0;
 
+    //add bnt txt variable
+    private Integer contador=0;
+
+    private TextView mShowCount;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,13 +46,30 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        setSupportActionBar(binding.toolbar);
+     //   setSupportActionBar(binding.toolbar);
 
         bntCnt = findViewById(R.id.button_xml);
+        btnrst = findViewById(R.id.reset);
         bntCnt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 cnt = cnt+1;
+                contador = contador +1;
+                TextView mShowCount = (TextView) findViewById(R.id.cnttxt);
+                mShowCount.setText(contador.toString());
+
+                Toast.makeText(MainActivity.this,"Cuenta en: " + cnt,Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnrst.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cnt = 0;
+                contador = 0;
+                TextView mShowCount = (TextView) findViewById(R.id.cnttxt);
+                mShowCount.setText(contador.toString());
+
                 Toast.makeText(MainActivity.this,"Cuenta en: " + cnt,Toast.LENGTH_SHORT).show();
             }
         });

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
    <!-- <fragment
@@ -17,14 +18,54 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/nav_graph" />-->
+
    <Button
        android:id="@+id/button_xml"
-       android:layout_width="wrap_content"
+       android:layout_width="0dp"
        android:layout_height="wrap_content"
+       android:onClick="doclick"
        android:text="@string/btnCount"
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.498"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toTopOf="parent"
-       android:onClick="doclick" />
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <TextView
+       android:id="@+id/cnttxt"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:gravity="center_horizontal"
+       android:text="@string/cnt_txt"
+       android:textColor="@android:color/holo_blue_dark"
+       android:textSize="50sp"
+       app:layout_constraintBottom_toTopOf="@+id/button_xml"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <TextView
+       android:id="@+id/HeadText"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:background="#5520B3"
+       android:backgroundTint="#5C21C5"
+       android:gravity="center_horizontal"
+       android:text="@string/title"
+       android:textColor="#FFFFFF"
+       android:textColorHighlight="#B5A0A0"
+       android:textColorLink="#629C1F"
+       android:textSize="48sp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <Button
+       android:id="@+id/reset"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:text="@string/reset"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/button_xml" />
 </androidx.constraintlayout.widget.ConstraintLayout>
