@@ -23,6 +23,7 @@
        android:id="@+id/button_xml"
        android:layout_width="0dp"
        android:layout_height="wrap_content"
+       android:backgroundTint="@android:color/holo_green_light"
        android:onClick="doclick"
        android:text="@string/btnCount"
        app:layout_constraintBottom_toBottomOf="parent"
@@ -64,8 +65,19 @@
        android:id="@+id/reset"
        android:layout_width="0dp"
        android:layout_height="wrap_content"
+       android:backgroundTint="@android:color/holo_red_light"
        android:text="@string/reset"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toBottomOf="@+id/button_xml" />
+
+   <Button
+       android:id="@+id/restar"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:backgroundTint="@android:color/holo_blue_light"
+       android:text="@string/restar"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/reset" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private Button bntCnt;
 
     private Button btnrst;
+    private Button btnrest;
 
     //add cnt variable
     private int cnt=0;
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         bntCnt = findViewById(R.id.button_xml);
         btnrst = findViewById(R.id.reset);
+        btnrest = findViewById(R.id.restar);
         bntCnt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,6 +61,21 @@ public class MainActivity extends AppCompatActivity {
                 mShowCount.setText(contador.toString());
 
                 Toast.makeText(MainActivity.this,"Cuenta en: " + cnt,Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnrest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(cnt > 0 && contador>0){
+                    cnt = cnt-1;
+                    contador = contador-1;
+                    TextView mShowCount = (TextView) findViewById(R.id.cnttxt);
+                    mShowCount.setText(contador.toString());
+                    Toast.makeText(MainActivity.this,"Cuenta en: " + cnt,Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(MainActivity.this,"Number can't be negative",Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
