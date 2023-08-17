@@ -19,6 +19,7 @@ import com.example.bsa2.databinding.ActivityMainBinding;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private Button bntCnt;
 
     //add cnt variable
-    private Integer cnt;
+    private int cnt=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,8 @@ public class MainActivity extends AppCompatActivity {
         bntCnt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                cnt = cnt+1;
+                Toast.makeText(MainActivity.this,"Cuenta en: " + cnt,Toast.LENGTH_SHORT).show();
             }
         });
 
